@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+    background: #454343;
+}
+/* Nav bar */
+header {
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    position: relative;
+    margin: 50px auto 0;
+    width: 550px;
+    height: 50px;
+    background: #454343;
+    border-radius: 8px;
+    font-size: 0;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.1);
+}
+
+nav a {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+}
+
+nav .animation{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 0;
+    background: #16f37d;
+    border-radius: 10px;
+    transition: all .5s ease 0s;
+}
+
+nav a:nth-child(1) {
+    width: 20%;
+}
+
+nav .start-home, a:nth-child(1):hover~.animation {
+    width: 20%;
+    left: 0;
+}
+
+nav a:nth-child(2) {
+    width: 80px;
+}
+
+nav a:nth-child(2):hover~.animation {
+    width: 110px;
+    left: 100px;
+}
+
+nav a:nth-child(3) {
+    width: 100px;
+}
+
+nav a:nth-child(3):hover~.animation {
+    width: 100px;
+    left: 196px;
+}
+
+nav a:nth-child(4) {
+    width: 130px;
+}
+
+nav a:nth-child(4):hover~.animation {
+    width: 130px;
+    left: 295px;
+}
+
+nav a:nth-child(5) {
+    width: 120px;
+}
+
+nav a:nth-child(5):hover~.animation {
+    width: 120px;
+    left: 430px;
+}
+
+/* Nav bar */
+
+/* 
+for background image, when we wanna do image on full screen web-site
+
+.background {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+} */
+
+/* Header who i'm */
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .static-txt {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.hero .dynamic-txts {
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.dynamic-txts li{
+    list-style: none;
+    color: #16f37d;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100%{
+        top: -360px;
+    }
+}
+
+.dynamic-txts li span {
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+}
+
+.dynamic-txts li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    border-left: 2px solid #16f37d;
+    animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+    40%, 60% {
+        left: calc(100% + 30%);
+    }
+    100% {
+        left: 0;
+    }
+}
+
+/* Header who i'm */
+
+/* Menu */
+
+.fig {
+    display: block; /* Блочный элемент (для старых браузеров) */
+    text-align: center; /* Выравнивание по центру */
+    font-style: italic; /* Курсивное начертание */
+    margin-top: 0; /* Отступ сверху */
+    margin-bottom: 5px; /* Отступ снизу */
+    color: #16f37d; /* Цвет подрисуночной подписи */
+   }
+
+.txtAboutMe {
+    margin-left: 40px;
+    font-size: larger;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+    font-weight: bold;
+}
+/* Menu */
